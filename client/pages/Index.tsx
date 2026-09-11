@@ -3,9 +3,7 @@ import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import {
   ArrowDown,
   ArrowUpRight,
-  Check,
   ChevronRight,
-  CirclePlay,
   Flame,
   MapPin,
   Menu,
@@ -26,7 +24,7 @@ const HERO_IMAGE = "https://cdn.builder.io/api/v1/image/assets%2Fd93bdecde0304b4
 const STALL_IMAGE = "https://cdn.builder.io/api/v1/image/assets%2Fd93bdecde0304b4aae247bbf7b3ffd85%2F22c1f895f74f4e7fbc00eaa894fa87bc?format=webp&width=800&height=1200";
 const FOOD_IMAGE = "https://cdn.builder.io/api/v1/image/assets%2Fd93bdecde0304b4aae247bbf7b3ffd85%2F950d7d4ee93d4003a9806a298ed9ee56?format=webp&width=800&height=1200";
 const FATHER_IMAGE = "https://cdn.builder.io/api/v1/image/assets%2Fd93bdecde0304b4aae247bbf7b3ffd85%2F173e5b9f80a44589a113744fbbee7a98?format=webp&width=800&height=1200";
-const MAPS = "https://www.google.com/maps/search/?api=1&query=V4W8%2BX4Q%2C%20Gulshan-e-Jamal%2C%20Karachi";
+const MAPS = "https://share.google/4IsMIEyRI6H6kZuqW";
 const WHATSAPP = "https://wa.me/923361125871";
 const PHONE = "tel:+923361125871";
 
@@ -34,7 +32,6 @@ const navItems = [
   ["HOME", "home"],
   ["AHMED BHAI", "ahmed"],
   ["THE CHAAT", "chaat"],
-  ["AHMED'S STYLE", "style"],
   ["VISIT US", "visit"],
 ];
 
@@ -55,7 +52,6 @@ export default function Index() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [videoPlaying, setVideoPlaying] = useState(false);
   const [muted, setMuted] = useState(true);
-  const [heard, setHeard] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
   const { scrollYProgress } = useScroll();
   const progress = useSpring(scrollYProgress, { stiffness: 100, damping: 30 });
@@ -122,17 +118,16 @@ export default function Index() {
         </section>
 
         <section id="chaat" className="chaat-section cream-section">
-          <div className="page-width"><Reveal><SectionLabel>THE CHAAT</SectionLabel><div className="section-heading-row"><div><h2>Simple ingredients.<br /><span>Full Ahmed-style attitude.</span></h2></div><p>Four essentials. Infinite cravings.<br />No prices, just good taste.</p></div></Reveal>
+          <div className="page-width"><Reveal><SectionLabel>THE CHAAT</SectionLabel><div className="section-heading-row"><div><h2>THE <span>CHAAT</span></h2></div><p>Four essentials. Infinite cravings.<br />No prices, just good taste.</p></div></Reveal>
             <div className="food-grid">{[
               ["01", "SAMOSA CHAAT", "Crispy samosa, spicy chana, chutneys aur creamy yogurt ka full street-food combination.", FOOD_IMAGE],
               ["02", "CRISPY SAMOSA", "Golden, crispy aur garma-garam.", STALL_IMAGE],
-              ["03", "CHANA CHAAT", "Spicy chana with chatpati chutneys and Ahmed Bhai's style.", HERO_IMAGE],
+              ["03", "SANTAXY SAMOSA CHANAAT", "MUNTAMY DANDATY BANTACHOON KE LIYE", STALL_IMAGE],
               ["04", "SPECIAL CHUTNEYS", "Woh chutney jo ek bite ko doosri bite tak le jaye.", FOOD_IMAGE],
             ].map(([num, title, copy, image], i) => <Reveal key={title} delay={i * 0.08}><article className={`food-card ${i === 0 ? "featured" : ""}`}><div className="food-image"><img src={image} alt={title} loading="lazy" /><span>{num}</span></div><div className="food-info"><h3>{title}</h3><p>{copy}</p><ArrowUpRight size={19} /></div></article></Reveal>)}</div>
           </div>
         </section>
 
-        <section id="style" className="dictionary-section page-width"><Reveal><div className="dictionary-top"><div><SectionLabel>AHMED BHAI'S STYLE</SectionLabel><h2>AHMED BHAI KI<br /><span>DICTIONARY</span></h2></div><p>Some words are made up.<br />Some styles are earned.</p></div></Reveal><div className="dictionary-grid">{[["01", "SANTEXY", "SAMOSA CHANAAT", "Ahmed Bhai ka apna unique style!"], ["02", "MUNTAMY", "DANTADY BANTACHE", "Mummy Daddy Bache — Ahmed Bhai style!"], ["03", "AHMED BHAI KI", "CHAT", "The original. The iconic. The full vibe."]].map(([n, a, b, copy], i) => <Reveal delay={i * 0.1} key={n}><article className={`word-card ${i === 2 ? "word-featured" : ""}`}><span className="word-number">{n}</span><h3>{a}<br /><strong>{b}</strong></h3><p>{copy}</p>{i === 2 && <Sparkles size={21} className="word-spark" />}</article></Reveal>)}</div><button className={`style-button ${heard ? "heard" : ""}`} onClick={() => setHeard(!heard)}>{heard ? <><Check size={18} /> STYLE DELIVERED</> : <><CirclePlay size={18} /> HEAR THE AHMED STYLE</>}</button></section>
 
         <section className="video-section dark-section"><div className="page-width"><Reveal><div className="video-header"><div><SectionLabel dark>THE VIDEO EXPERIENCE</SectionLabel><h2>STYLE DEKHI<br /><em>HAI?</em></h2></div><p>Ab Ahmed Bhai ka asli<br />andaaz dekho.</p></div></Reveal><Reveal delay={0.15}><div className="video-container"><video ref={videoRef} src={VIDEO} poster={STALL_IMAGE} muted={muted} loop playsInline onPlay={() => setVideoPlaying(true)} onPause={() => setVideoPlaying(false)} /><div className="video-controls"><button onClick={toggleVideo} aria-label={videoPlaying ? "Pause video" : "Play video"}>{videoPlaying ? <Pause fill="currentColor" /> : <Play fill="currentColor" />}</button><span>Yeh hai Ahmed Bhai ka style!</span><button onClick={toggleMute} aria-label={muted ? "Unmute video" : "Mute video"}>{muted ? <VolumeX /> : <Volume2 />}</button></div></div></Reveal></div></section>
 
