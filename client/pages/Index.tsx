@@ -120,8 +120,8 @@ export default function Index() {
         <section id="chaat" className="chaat-section cream-section">
           <div className="page-width"><Reveal><SectionLabel>THE CHAAT</SectionLabel><div className="section-heading-row"><div><h2>THE <span>CHAAT</span></h2></div><p>Four essentials. Infinite cravings.<br />No prices, just good taste.</p></div></Reveal>
             <div className="food-grid">{[
-              ["01", "SAMOSA CHAAT", "Crispy samosa, spicy chana, chutneys aur creamy yogurt ka full street-food combination.", FOOD_IMAGE],
-              ["02", "CRISPY SAMOSA", "Golden, crispy aur garma-garam.", STALL_IMAGE],
+              ["01", "SAMOSA CHAAT", "Crispy samosa, crispy samosay, chutneys aur creamy yogurt ka full street-food combination.", FOOD_IMAGE],
+              ["02", "SANTAXY SANTAMOSA CHANTAT", "Golden, crispy aur garma-garam.", STALL_IMAGE],
               ["03", "SANTAXY SAMOSA CHANAAT", "MUNTAMY DANDATY BANTACHOON KE LIYE", STALL_IMAGE],
               ["04", "SPECIAL CHUTNEYS", "Woh chutney jo ek bite ko doosri bite tak le jaye.", FOOD_IMAGE],
             ].map(([num, title, copy, image], i) => <Reveal key={title} delay={i * 0.08}><article className={`food-card ${i === 0 ? "featured" : ""}`}><div className="food-image"><img src={image} alt={title} loading="lazy" /><span>{num}</span></div><div className="food-info"><h3>{title}</h3><p>{copy}</p><ArrowUpRight size={19} /></div></article></Reveal>)}</div>
