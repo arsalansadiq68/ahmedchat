@@ -20,7 +20,7 @@ import {
 } from "lucide-react";
 
 const VIDEO = "https://cdn.builder.io/o/assets%2Fd93bdecde0304b4aae247bbf7b3ffd85%2F41e3721cf6504621b37d660ddb4941df?alt=media&token=374acf94-214b-4efd-9bcb-ef4e7e9796ca&apiKey=d93bdecde0304b4aae247bbf7b3ffd85";
-const HERO_IMAGE = "https://cdn.builder.io/api/v1/image/assets%2Fd93bdecde0304b4aae247bbf7b3ffd85%2Fe168bef0adc2463cbb649f68fd1da9ef?format=webp&width=800&height=1200";
+const HERO_IMAGE = "https://cdn.builder.io/api/v1/image/assets%2Fd93bdecde0304b4aae247bbf7b3ffd85%2Ff6940e2965774cc1a87fe9697aa30b3c?format=webp&width=800&height=1200";
 const STALL_IMAGE = "https://cdn.builder.io/api/v1/image/assets%2Fd93bdecde0304b4aae247bbf7b3ffd85%2F22c1f895f74f4e7fbc00eaa894fa87bc?format=webp&width=800&height=1200";
 const FOOD_IMAGE = "https://cdn.builder.io/api/v1/image/assets%2Fd93bdecde0304b4aae247bbf7b3ffd85%2F950d7d4ee93d4003a9806a298ed9ee56?format=webp&width=800&height=1200";
 const FATHER_IMAGE = "https://cdn.builder.io/api/v1/image/assets%2Fd93bdecde0304b4aae247bbf7b3ffd85%2F173e5b9f80a44589a113744fbbee7a98?format=webp&width=800&height=1200";
@@ -91,7 +91,7 @@ export default function Index() {
           <div className="hero-grain" />
           <div className="hero-content page-width">
             <Reveal><SectionLabel dark>KARACHI STREET FOOD</SectionLabel></Reveal>
-            <Reveal delay={0.1}><h1>AHMED KI<br /><em>CHAT LOO!</em></h1></Reveal>
+            <Reveal delay={0.1}><h1>AHMED BHAI KI<br /><em>CHAT LOO!</em></h1></Reveal>
             <Reveal delay={0.2}><p className="hero-subtitle">Karachi ki asli Sindhi-style Samosa Chaat</p></Reveal>
             <Reveal delay={0.3}><p className="hero-copy">Crispy samosay, spicy chana, chatpati chutneys aur Ahmed Bhai ka apna unique style.</p></Reveal>
             <Reveal delay={0.4}><div className="hero-actions"><a href={WHATSAPP} target="_blank" rel="noreferrer" className="button button-yellow"><MessageCircle size={18} /> WHATSAPP AHMED BHAI <ArrowUpRight size={16} /></a><a href={PHONE} className="button button-outline"><Phone size={17} /> CALL AHMED BHAI</a></div></Reveal>
@@ -108,7 +108,7 @@ export default function Index() {
         <section id="ahmed" className="ahmed-section dark-section">
           <div className="page-width split-layout">
             <Reveal className="portrait-wrap"><div className="photo-frame"><img src={HERO_IMAGE} alt="Ahmed Bhai at Ahmed Samosa Chaat House" loading="lazy" /><span className="frame-corner corner-tl" /><span className="frame-corner corner-br" /></div><div className="portrait-caption"><span>THE MAN</span><span>THE MYTH<br />THE MASALA</span></div></Reveal>
-            <Reveal delay={0.15}><SectionLabel dark>MEET AHMED BHAI</SectionLabel><h2 className="light-heading">Naam Ahmed.<br /><em>Style apni.</em><br />Chaat sabki favourite.</h2><p className="light-copy">Ahmed Samosa Chaat House Karachi ki street-food culture ka ek mashhoor naam hai. Crispy samosay, spicy chana, chutneys aur Ahmed Bhai ka apna unique andaaz is jagah ko yaadgar banata hai.</p><div className="pull-quote"><Quote size={24} /><span>AHMED KI<br /><strong>CHAT LOO!</strong></span></div></Reveal>
+            <Reveal delay={0.15}><SectionLabel dark>MEET AHMED BHAI</SectionLabel><h2 className="light-heading">Naam Ahmed.<br /><em>Style apni.</em><br />Chaat sabki favourite.</h2><p className="light-copy">Ahmed Samosa Chaat House Karachi ki street-food culture ka ek mashhoor naam hai. Crispy samosay, spicy chana, chutneys aur Ahmed Bhai ka apna unique andaaz is jagah ko yaadgar banata hai.</p><div className="pull-quote"><Quote size={24} /><span>AHMED BHAI KI<br /><strong>CHAT LOO!</strong></span></div></Reveal>
           </div>
         </section>
 
